@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #151515;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.container{
+    width: 40vw;
+    height: 40vw;
+    border-radius: 20vw;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: #5a5a5a solid 5px;
+}
+
+#fan1, #fan2, #fan3, #fan4{
+    background-color: #5a5a5a;
+    width: 40px;
+    height: 40vw;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#fan1{
+    transform: translate(-50%, -50%) rotate(90deg);
+    animation: fan1-rotation 5s infinite linear;
+}
+
+#fan2{
+    transform: translate(-50%, -50%);
+    animation: fan2-rotation 5s infinite linear;
+}
+
+#fan3{
+    transform: translate(-50%, -50%) rotate(45deg);
+    animation: fan3-rotation 5s infinite linear;
+
+}
+
+#fan4{
+    transform: translate(-50%, -50%) rotate(315deg);
+    animation: fan4-rotation 5s infinite linear;
+
+}
+
+.empty, .empty1{
+    width: 30vw;
+    height: 30vw;
+    border-radius: 15vw;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #151515;
+    /* z-index: 50; */
+    border: #5a5a5a solid 5px;
+}
+
+.empty1{
+    width: 20vw;
+    height: 20vw;
+    border-radius: 10vw;
+    /* z-index: 51; */
+}
+
+.empty>#fan1, .empty>#fan2, .empty>#fan3, .empty>#fan4{
+    height: 30vw;
+}
+
+.empty>#fan1{
+    transform: translate(-50%, -50%) rotate(90deg);
+    animation: fan1-rotation 5s infinite linear reverse;
+}
+
+.empty>#fan2{
+    transform: translate(-50%, -50%);
+    animation: fan2-rotation 5s infinite linear reverse;
+}
+
+.empty>#fan3{
+    transform: translate(-50%, -50%) rotate(45deg);
+    animation: fan3-rotation 5s infinite linear reverse;
+
+}
+
+.empty>#fan4{
+    transform: translate(-50%, -50%) rotate(315deg);
+    animation: fan4-rotation 5s infinite linear reverse;
+
+}
+
+@keyframes fan1-rotation{
+    0%{
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+    25%{
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+    50%{
+        transform: translate(-50%, -50%) rotate(270deg);
+    }
+    75%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(450deg);
+    }
+}
+
+@keyframes fan2-rotation{
+    0%{
+        transform: translate(-50%, -50%);
+    }
+    25%{
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+    50%{
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+    75%{
+        transform: translate(-50%, -50%) rotate(270deg);
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes fan3-rotation{
+    0%{
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    25%{
+        transform: translate(-50%, -50%) rotate(135deg);
+    }
+    50%{
+        transform: translate(-50%, -50%) rotate(225deg);
+    }
+    75%{
+        transform: translate(-50%, -50%) rotate(315deg);
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(405deg);
+    }
+}
+
+
+@keyframes fan4-rotation{
+    0%{
+        transform: translate(-50%, -50%) rotate(315deg);
+    }
+    25%{
+        transform: translate(-50%, -50%) rotate(405deg);
+    }
+    50%{
+        transform: translate(-50%, -50%) rotate(495deg);
+    }
+    75%{
+        transform: translate(-50%, -50%) rotate(585deg);
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(675deg);
+    }
+}
+
+
+
+
